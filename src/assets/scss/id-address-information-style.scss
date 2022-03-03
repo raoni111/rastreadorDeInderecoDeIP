@@ -1,0 +1,69 @@
+@import "../config/config.scss";
+
+.id-address-information-content {
+  width: 85%;
+  margin-top: $margin-content;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 20px;
+  .informations-content {
+    overflow-y: auto;
+    overflow-x: hidden;
+    &::-webkit-scrollbar{
+      width: 5px;
+      background-color: rgb(218, 218, 218);
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: rgb(114, 114, 114);
+      border-radius: 10px;
+    }
+    @include displayFlex(row, center, center);
+    .information {
+      width: 270px;
+      height: 100px;
+      margin-right: 1rem;
+      padding-right: 0.5rem;
+      border-right: 1px solid $Dark-Gray;
+      &:nth-child(4) {
+        border-right: none;
+      }
+      h3 {
+        text-transform: uppercase;
+        color: $Dark-Gray;
+        font-size: 0.8rem;
+      }
+      p {
+        color: $segundary-font-color;
+        margin-top: 1rem;
+        font-size: 1.5rem;
+      }
+    }
+  }
+  @media (max-width: 750px) {
+    padding: 1rem;
+    .informations-content {
+      @include displayFlex(column, center, center);
+      .information {
+        width: 270px auto;
+        height: 50px;
+        margin-right: 0rem;
+        text-align: center;
+        border: none;
+        h3 {
+          text-transform: uppercase;
+          color: $Dark-Gray;
+          font-size: 0.7rem;
+        }
+        p {
+          color: $segundary-font-color;
+          margin-top: 0rem;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+  @media (max-width: 340px) {
+    width: 97%;
+  }
+}
