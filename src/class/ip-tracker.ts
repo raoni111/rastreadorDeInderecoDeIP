@@ -3,7 +3,7 @@ import IpTrackerProtocol from './interface/ip-tracker-protocol';
 import axios from 'axios';
 
 export default class IpTracker implements IpTrackerProtocol {
-  ipInformation: IpInformationType | null = null;
+  protected ipInformation: IpInformationType | null = null;
   protected _ip = '';
 
   set setIp(ip: string) {
